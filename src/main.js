@@ -1,5 +1,3 @@
-import './style.css';
-
 const scenes = [
   { name: 'earth', tag: 'EARTH', title: 'MACHINE EYE', subtitle: '从地球开始理解空间', duration: 5 },
   { name: 'region', tag: 'REGION', title: 'REGION LOCK', subtitle: '从全球尺度进入区域尺度', duration: 5 },
