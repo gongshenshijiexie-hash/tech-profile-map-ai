@@ -1,0 +1,168 @@
+ .dimension-steps em:nth-child(3):before,
+.scene-s06[data-phase="3"] .dimension-steps em:nth-child(4):before,
+.scene-s06[data-phase="4"] .dimension-steps em:nth-child(5):before,
+.scene-s06[data-phase="5"] .dimension-steps em:nth-child(6):before{background:var(--cyan);box-shadow:0 0 9px var(--cyan)}
+.scene-s06[data-phase="1"] .data-dimension>i{border-radius:44% 56% 48% 52%;background:conic-gradient(from 210deg,#1e717644,#71ffe999,#1f5d6555,#7fffe633,#1e717644)}
+.scene-s06[data-phase="2"] .data-dimension>i{border-radius:8%;background:repeating-radial-gradient(circle at 45% 52%,#56f1dd30 0 4px,#0b2b2e66 5px 12px);transform:rotate(6deg) scale(.94)}
+.scene-s06[data-phase="3"] .data-dimension>i{border-radius:50%;background:radial-gradient(circle at 50% 50%,#fff 0 3%,#56f1ddcc 4% 8%,transparent 9% 20%,#56f1dd40 21% 22%,transparent 23%);box-shadow:0 0 0 20px #56f1dd0d,0 0 48px #56f1dd28}
+.scene-s06[data-phase="4"] .data-dimension>i{border-radius:5%;transform:perspective(260px) rotateX(58deg) rotate(-9deg);background:linear-gradient(135deg,#56f1dd0d,#56f1dd77 48%,#07181e 50%,#56f1dd33 72%,#061012);box-shadow:0 18px 26px #0008}
+.scene-s06[data-phase="5"] .data-dimension>i{border-radius:50%;background:conic-gradient(from calc(var(--scene-progress)*360deg),#56f1dd13,#56f1ddaa,#07181e 42%,#56f1dd22 72%,#56f1dd13);box-shadow:0 0 0 1px #56f1dd55,0 0 42px #56f1dd28}
+.scene-s06 .rail span:last-child{opacity:.2}
+
+/* Fixed mobile subtitle safe area. */
+footer{bottom:3.4%;height:136px;padding-top:12px;background:linear-gradient(180deg,#06101208 0,#061012e8 15%,#061012f7 100%)}
+.caption{height:90px;min-height:90px;max-height:90px;overflow:hidden;padding:4px 10px 0 13px;font-size:18px;line-height:1.48;display:flex;align-items:flex-start}
+.progress{margin-top:7px}
+.attribution{bottom:18.5%}
+
+/* End card: one hierarchy only. */
+.scene-s10 .next-label{display:none!important}
+.scene-s10 .copy{top:25.5%;right:8%}
+.scene-s10 .copy h1{font-size:38px;line-height:1.18;max-width:100%}
+.scene-s10 .copy h2{font-size:16px;line-height:1.45;max-width:100%;margin-top:15px;color:#d7e6e4;letter-spacing:.04em}
+.scene-s10 .rail span:last-child{opacity:.24}
+.scene-s10 .globe{opacity:.08;transform:translate(-50%,-2%) scale(.48)}
+
+@keyframes dimensionSweep{0%{transform:translateY(0);opacity:.25}45%{opacity:1}100%{transform:translateY(205px);opacity:.18}}
+@keyframes dimensionPulse{50%{filter:brightness(1.18) saturate(1.25);transform:scale(1.035)}}
+
+@media(max-width:480px){
+  footer{height:29vw;min-height:122px;max-height:142px}
+  .caption{height:19vw;min-height:82px;max-height:94px;font-size:4.15vw;line-height:1.48}
+  .scene-s02 .region-outline{width:29%;left:47%}
+  .scene-s03 .region-outline{width:32%;left:44%}
+}
+
+
+/* ======================================================================
+   EP138 H5 V1.2.2 | REAL MAP CONTINUITY FIX
+   S04-S09 now read as one continuous real-map transformation chain.
+   ====================================================================== */
+.stage{
+  --map-frame:url("assets/shanghai_hold.jpg");
+  --seg-road:url("assets/road.png");
+  --seg-building:url("assets/building.png");
+  --seg-water:url("assets/water.png");
+  --seg-vegetation:url("assets/vegetation.png");
+  --model-edges:url("assets/model_edges.png");
+}
+
+/* Frozen Shanghai frame: same Earth Studio source, used only after the video shot ends. */
+.map-continuity-bg{
+  position:absolute;inset:0;z-index:1;opacity:0;visibility:hidden;pointer-events:none;
+  background-image:linear-gradient(180deg,#06101244 0,#06101220 35%,#06101288 78%,#061012dd 100%),var(--map-frame);
+  background-size:cover;background-position:center;background-repeat:no-repeat;
+  filter:saturate(.78) contrast(1.08) brightness(.72);
+  transform:scale(1.012);transition:opacity .55s ease,filter .55s ease,transform .8s ease;
+}
+.scene-s06 .map-continuity-bg{opacity:.38;visibility:visible;filter:saturate(.70) contrast(1.10) brightness(.62);transform:scale(1.025)}
+.scene-s07 .map-continuity-bg{opacity:.28;visibility:visible;filter:saturate(.62) contrast(1.12) brightness(.52);transform:scale(1.035)}
+.scene-s08 .map-continuity-bg{opacity:.22;visibility:visible;filter:saturate(.55) contrast(1.14) brightness(.46);transform:scale(1.045)}
+.scene-s09 .map-continuity-bg{opacity:.17;visibility:visible;filter:saturate(.35) contrast(1.18) brightness(.38);transform:scale(1.055)}
+
+/* The procedural globe has no narrative job after the real-map handoff. */
+.scene-s06 .globe,.scene-s07 .globe,.scene-s08 .globe,.scene-s09 .globe,.scene-s10 .globe{display:none!important;opacity:0!important;visibility:hidden!important}
+
+/* S04: real map remains the hero; the vector plane is only a transition cue. */
+.scene-s04 .city-plane{opacity:.18!important;top:61%;height:32%;background-color:#07181b88;transform:perspective(520px) rotateX(64deg) scale(1.02)}
+.scene-s04 .city-plane b{opacity:.35}
+.scene-s04 .grid{opacity:.18}
+
+/* S06: the same Shanghai image is now read in multiple sensing dimensions. */
+.scene-s06 .city-plane{opacity:.10!important}
+.scene-s06 .data-dimension{
+  top:39%;bottom:27.5%;left:8%;right:8%;overflow:hidden;
+  background-image:linear-gradient(90deg,#071315e8 0,#071315b5 39%,#07131558 100%),var(--map-frame)!important;
+  background-size:cover!important;background-position:center 47%!important;
+  border-color:#75eee8aa;box-shadow:0 18px 44px #0008,inset 0 0 0 1px #56f1dd18;
+}
+.scene-s06 .data-dimension:before{
+  background:linear-gradient(90deg,#56f1dd10 1px,transparent 1px),linear-gradient(#56f1dd0c 1px,transparent 1px)!important;
+  background-size:44px 44px!important;opacity:.72;
+}
+.scene-s06 .data-dimension>i{right:5%;top:18%;width:37%;filter:drop-shadow(0 0 12px #56f1dd55)}
+.scene-s06 .data-dimension>b{font-size:17px;text-shadow:0 2px 12px #000}
+.scene-s06 .dimension-steps{background:linear-gradient(90deg,#061012b8,transparent);padding:5px 8px 5px 0}
+
+/* S07: semantic overlays are derived from the frozen real map, not abstract polygons. */
+.stage.scene-s07 .semantic-map{
+  top:40%;bottom:22.5%;left:5%;right:5%;transform:rotate(-1.2deg);overflow:hidden;
+  background-image:linear-gradient(#56f1dd20 1px,transparent 1px),linear-gradient(90deg,#56f1dd20 1px,transparent 1px),linear-gradient(#06101233,#06101255),var(--map-frame)!important;
+  background-size:26px 26px,26px 26px,cover,cover!important;
+  background-position:0 0,0 0,center,center!important;
+  border:1px solid #c9fffbb8;box-shadow:0 24px 48px #0008,inset 0 0 38px #04101288;
+}
+.stage.scene-s07 .semantic-map:before{
+  background:radial-gradient(circle at 57% 54%,transparent 0 18%,#56f1dd16 19% 19.5%,transparent 20% 31%,#56f1dd10 32% 32.5%,transparent 33%)!important;
+  opacity:.75;
+}
+.stage.scene-s07 .semantic-map i{
+  inset:0!important;clip-path:none!important;background-color:transparent!important;background-repeat:no-repeat!important;
+  background-size:cover!important;background-position:center!important;mix-blend-mode:screen;opacity:0;transition:opacity .5s ease,filter .5s ease;
+}
+.stage.scene-s07 .semantic-map .road{background-image:var(--seg-road)!important}
+.stage.scene-s07 .semantic-map .building{background-image:var(--seg-building)!important}
+.stage.scene-s07 .semantic-map .water{background-image:var(--seg-water)!important}
+.stage.scene-s07 .semantic-map .land{background-image:var(--seg-vegetation)!important}
+.scene-s07[data-phase="0"] .semantic-map i,.scene-s07[data-phase="1"] .semantic-map i{opacity:0!important}
+.scene-s07[data-phase="2"] .semantic-map .road{opacity:.90!important}
+.scene-s07[data-phase="3"] .semantic-map .road{opacity:.70!important} .scene-s07[data-phase="3"] .semantic-map .building{opacity:.88!important}
+.scene-s07[data-phase="4"] .semantic-map .road{opacity:.58!important} .scene-s07[data-phase="4"] .semantic-map .building{opacity:.72!important} .scene-s07[data-phase="4"] .semantic-map .water{opacity:.90!important}
+.scene-s07[data-phase="5"] .semantic-map .road{opacity:.48!important} .scene-s07[data-phase="5"] .semantic-map .building{opacity:.60!important} .scene-s07[data-phase="5"] .semantic-map .water{opacity:.82!important} .scene-s07[data-phase="5"] .semantic-map .land{opacity:.86!important}
+.scene-s07[data-phase="6"] .semantic-map .road{opacity:.46!important} .scene-s07[data-phase="6"] .semantic-map .building{opacity:.56!important} .scene-s07[data-phase="6"] .semantic-map .water{opacity:.80!important} .scene-s07[data-phase="6"] .semantic-map .land{opacity:.80!important}
+.scene-s07[data-phase="0"] .ai-scan,.scene-s07[data-phase="1"] .ai-scan{opacity:0!important}
+.scene-s07[data-phase="2"] .ai-scan,.scene-s07[data-phase="3"] .ai-scan,.scene-s07[data-phase="4"] .ai-scan,.scene-s07[data-phase="5"] .ai-scan,.scene-s07[data-phase="6"] .ai-scan{opacity:1!important}
+.scene-s07 .legend{top:69.4%;padding:8px 10px;background:#061012a8;border-top:1px solid #56f1dd2f}
+
+/* S08: four separated planes all inherit the SAME map and one extracted semantic mask. */
+.scene-s08 .layer-stack{top:44.5%;left:9%;right:9%;height:30%;transform:perspective(610px) rotateX(61deg) rotate(-3deg)}
+.scene-s08 .layer-stack i{
+  background-color:#071315d8!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;
+  border:1px solid #72f4e9d0!important;color:#eafffc!important;text-shadow:0 2px 8px #000;box-shadow:0 13px 28px #0009,inset 0 0 24px #06101299!important;
+}
+.scene-s08 .layer-stack i:nth-child(1){background-image:linear-gradient(#ff526622,#ff526622),var(--seg-building),var(--map-frame)!important}
+.scene-s08 .layer-stack i:nth-child(2){background-image:linear-gradient(#48dc6520,#48dc6520),var(--seg-vegetation),var(--map-frame)!important}
+.scene-s08 .layer-stack i:nth-child(3){background-image:linear-gradient(#3b91ff1f,#3b91ff1f),var(--seg-water),var(--map-frame)!important}
+.scene-s08 .layer-stack i:nth-child(4){background-image:linear-gradient(#eafffb18,#eafffb18),var(--seg-road),var(--map-frame)!important}
+.scene-s08 .grid{opacity:.14}
+
+/* S09: the real raster is still present while it becomes a machine-readable vector/grid model. */
+.scene-s09 .city-plane{opacity:.08!important}
+.scene-s09 .model-code{
+  top:47%;left:10%;right:10%;height:29%;overflow:hidden;
+  background-image:linear-gradient(180deg,#06101222,#061012b8),var(--model-edges),var(--map-frame)!important;
+  background-size:cover!important;background-position:center!important;
+  border-color:#8af8efad;box-shadow:0 22px 46px #000a,inset 0 0 38px #56f1dd12;
+}
+.scene-s09 .model-code:before{background:linear-gradient(#56f1dd28 1px,transparent 1px),linear-gradient(90deg,#56f1dd28 1px,transparent 1px)!important;background-size:26px 26px!important;opacity:.85}
+.scene-s09 .model-code:after{background:linear-gradient(100deg,transparent 46%,#dffffbdd 50%,transparent 54%)!important;opacity:.72}
+.scene-s09 .model-code i{background:#56f1dd18!important;box-shadow:0 0 0 1px #56f1ddaa,0 0 20px #56f1dd33}
+.scene-s09 .model-code b{font-size:12px;letter-spacing:.12em;text-shadow:0 2px 10px #000}
+
+/* S10: remove the ghost globe and keep a compressed structured-map trace as the visual hand-off to EP135. */
+.scene-s10 .map-continuity-bg{opacity:0!important;visibility:hidden!important}
+.scene-s10 .model-code{
+  opacity:.46!important;top:53%;left:13%;right:13%;height:19%;
+  transform:perspective(580px) rotateX(64deg) scale(.88);overflow:hidden;
+  background-image:linear-gradient(180deg,#06101235,#061012df),var(--model-edges),var(--map-frame)!important;
+  background-size:cover!important;background-position:center!important;
+  border-color:#56f1dd66;box-shadow:0 20px 40px #0009;
+}
+.scene-s10 .model-code:before{background:linear-gradient(#56f1dd1e 1px,transparent 1px),linear-gradient(90deg,#56f1dd1e 1px,transparent 1px)!important;background-size:30px 30px!important}
+.scene-s10 .model-code:after{background:linear-gradient(100deg,transparent 46%,#56f1dd99 50%,transparent 54%)!important;opacity:.55}
+.scene-s10 .model-code i{opacity:.65;background:#56f1dd12!important}
+.scene-s10 .model-code b{opacity:.75}
+.scene-s10 .grid{opacity:.30}
+.scene-s10 .attribution{display:none!important}
+
+/* Native Earth Studio / Google Earth source already carries its own credit in the image. */
+.scene-s06 .attribution,.scene-s07 .attribution,.scene-s08 .attribution,.scene-s09 .attribution{display:none!important}
+
+/* Keep copy and captions above all real-map treatment. */
+.copy,header,.scene-count,.rail,footer{isolation:isolate}
+</style>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+</html>
