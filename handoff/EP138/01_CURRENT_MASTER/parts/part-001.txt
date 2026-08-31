@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#071316" />
+  <title>EP138 · SPATIAL AI · H5 V1.2.2 BGM FIX · VISUAL FROZEN</title>
+  <script type="module">
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const n of document.querySelectorAll('link[rel="modulepreload"]'))r(n);new MutationObserver(n=>{for(const o of n)if(o.type==="childList")for(const T of o.addedNodes)T.tagName==="LINK"&&T.rel==="modulepreload"&&r(T)}).observe(document,{childList:!0,subtree:!0});function i(n){const o={};return n.integrity&&(o.integrity=n.integrity),n.referrerPolicy&&(o.referrerPolicy=n.referrerPolicy),n.crossOrigin==="use-credentials"?o.credentials="include":n.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function r(n){if(n.ep)return;n.ep=!0;const o=i(n);fetch(n.href,o)}})();const h=new URLSearchParams(location.search);var R,N;const d={earthStudioUrl:h.get("earthStudioUrl")??((R=window.EP134_CONFIG)==null?void 0:R.earthStudioUrl)??"data:video/mp4;base64,__CODEX_HANDOFF_OMITTED_video_mp4_1__",voiceUrl:h.get("voiceUrl")??((N=window.EP134_CONFIG)==null?void 0:N.voiceUrl)??"data:audio/wav;base64,__CODEX_HANDOFF_OMITTED_audio_wav_1__"},l=[{id:"S01",start:0,end:6.05,kicker:"CHAPTER 04",title:"空间智能",titleEn:"SPATIAL AI",caption:"当 AI 开始理解真实世界，它首先需要回答一个问题。",mode:"earth"},{id:"S02",start:6.05,end:14.116,kicker:"EARTH",title:"从地球，进入区域",titleEn:"EAST ASIA / REGION",caption:"它看到的卫星影像，如何一步步变成可以被机器理解的信息？",mode:"earth"},{id:"S03",start:14.116,end:25.585,kicker:"TARGET AREA",title:"AI 如何把真实世界",titleEn:"INTO A COMPUTABLE SPATIAL MODEL",caption:"AI 如何把真实世界，变成可计算的空间模型？",mode:"map"},{id:"S04",start:26.038,end:31.767,kicker:"EP138 / TITLE",title:`卫星拍下来的，
+为什么不是一张普通照片？`,titleEn:"SATELLITE IMAGE ≠ PHOTO",caption:"这一集，我们从一张卫星影像开始，拆开机器理解空间的过程。",mode:"map"},{id:"S05",start:32.201,end:40.934,kicker:"EARTH STUDIO / SHANGHAI",title:"上海 · 城市区域",titleEn:"EARTH OBSERVATION",caption:"卫星从高空记录城市，但影像本身，还不是机器能够直接理解的空间。",mode:"earth"},{id:"S06",start:41.418,end:57.56,kicker:"SATELLITE DATA",title:"一张影像，多种数据",titleEn:"VISIBLE / RGB · MULTISPECTRAL · RADAR · POSITION · ELEVATION · TIME",caption:"可见光、多光谱、雷达、位置、高程和时间，共同构成机器读取空间的原始数据。",mode:"map"},{id:"S07",start:58.032,end:69.772,kicker:"PIXEL + SEMANTIC",title:"像素，开始拥有语义",titleEn:"AI SCAN · ROAD · BUILDING · WATER · VEGETATION",caption:"卫星影像被切成像素网格，AI 扫描每一个区域，识别道路、建筑、水体和植被。",mode:"semantic"},{id:"S08",start:70.189,end:84.609,kicker:"LAYER STACK / 04",title:"识别结果，被分成图层",titleEn:"ROAD · BUILDING · WATER · VEGETATION",caption:"道路层、建筑层、水体层和植被层被分别提取，再按照空间位置重新叠加。",mode:"stack"},{id:"S09",start:85.021,end:93.005,kicker:"MODEL SCENE",title:"真实世界，变成结构化空间",titleEn:"REAL WORLD → STRUCTURED SPACE → MACHINE-READABLE MODEL",caption:"真实世界经过识别和分层，最终形成机器可读取、可计算的空间模型。",mode:"model"},{id:"S10",start:93.468,end:99.48,kicker:"NEXT / EP139",title:"AI 到底怎么知道，",titleEn:"哪里是路，哪里是房子？",caption:`下一集，我们继续往下拆：
+AI 到底怎么知道，哪里是路，哪里是房子？`,mode:"next"}],p=99.48;document.querySelector("#app").innerHTML=`
+  <main class="review-shell">
+    <section class="phone" aria-label="EP138 H5 review player">
+      <div id="stage" class="stage mode-earth">
+        <div class="earth-media" id="earthMedia"></div>
+        <div class="map-continuity-bg" aria-hidden="true"></div>
+        <div class="noise"></div><div class="grid"></div>
+        <div class="globe"><i></i><i></i><i></i></div>
+        <div class="region-outline"><i></i><b>SHANGHAI</b><span>31.2304° N<br>121.4737° E</span></div>
+        <div class="scale-track"><i></i><span>EARTH</span><span>EAST ASIA</span><span>TARGET AREA</span></div>
+        <div class="city-plane">
+          <div class="roads"></div>
+          ${Array.from({length:18},(e,a)=>`<b style="--i:${a}"></b>`).join("")}
+        </div>
+        <div class="semantic-map"><i class="land"></i><i class="water"></i><i class="road"></i><i class="building"></i></div>
+        <div class="ai-scan"></div>
+        <div class="data-dimension"><i></i><b id="dataLabel">VISIBLE / RGB</b><div class="dimension-steps"><em>VISIBLE</em><em>MULTISPECTRAL</em><em>RADAR</em><em>POSITION</em><em>ELEVATION</em><em>TIME</em></div><span>ONE CITY · MULTIPLE DIMENSIONS</span></div>
+        <div class="layer-stack"><i>04 / BUILDING</i><i>03 / VEGETATION</i><i>02 / WATER</i><i>01 / ROAD</i></div>
+        <div class="model-code"><i></i><i></i><i></i><i></i><b>STRUCTURED SPACE</b></div>
+
+        <header><span class="series">TECH PROFILE <b>/ 138</b></span><span class="review">H5 · V1.2.2 MAP CONTINUITY</span></header>
+        <aside class="rail"><span>SPATIAL AI</span><span>31°13′N 121°28′E</span></aside>
+        <div class="scene-count"><b id="sceneId">S01</b><span id="sceneTotal"> / 10</span></div>
+        <div class="copy">
+          <p id="kicker">从上帝视角开始</p>
+          <h1 id="title">地球，被重新读取</h1>
+          <h2 id="titleEn">THE MACHINE EYE</h2>
+        </div>
+        <div class="legend"><span><i></i>ROAD</span><span><i></i>BUILDING</span><span><i></i>WATER</span><span><i></i>VEGETATION</span></div>
+        <div class="next-label">EP139<br><b>NEXT PROFILE</b></div>
+        <div class="attribution">EARTH STUDIO · GOOGLE EARTH</div>
+        <footer><div class="caption" id="caption"></div><div class="progress"><i id="progress"></i></div><span id="timecode">00:00:00</span></footer>
+        <div id="earthMissing" class="asset-missing"><b>EARTH FOOTAGE</b><span>MEDIA PENDING</span></div>
+      </div>
+    </section>
+
+    <section class="review-panel">
+      <div class="panel-head"><div><small>PRODUCTION REVIEW</small><h3>EP138 · 空间智能</h3></div><span class="status">V1.2.2 MAP CONTINUITY</span></div>
+      <div class="media-status">
+        <div class="media-row"><span>EARTH STUDIO</span><b class="${d.earthStudioUrl?"online":""}">${d.earthStudioUrl?"URL CONNECTED":"MEDIA ASSET MISSING"}</b></div>
+        <div class="media-row"><span>VOICE TRACK</span><b class="${d.voiceUrl?"online":""}">${d.voiceUrl?"URL CONNECTED":"MEDIA ASSET MISSING"}</b></div>
+      </div>
+      <div id="sceneList" class="scene-list">${l.map((e,a)=>`<button data-scene="${a}"><b>${e.id}</b><span>${e.kicker}</span><time>${M(e.start,e.end)}</time></button>`).join("")}</div>
+      <div class="transport"><button id="play" aria-label="播放或暂停">▶</button><input id="seek" type="range" min="0" max="${p}" step="0.001" value="0"><output id="clock">00:00 / 01:39</output></div>
+      <p class="config-note">URL CONFIG · <code>?earthStudioUrl=…&voiceUrl=…</code></p>
+    </section>
+    ${d.voiceUrl?`<audio id="voice" src="${d.voiceUrl}" preload="metadata"></audio>`:""}
+    <audio id="bgm" src="data:audio/mpeg;base64,__CODEX_HANDOFF_OMITTED_audio_mpeg_1__" preload="auto" loop></audio>
+  </main>`;const s=e=>document.querySelector(e),v=s("#stage"),m=s("#seek"),O=s("#play"),c=document.querySelector("#voice"),B=document.querySelector("#bgm");c&&(c.muted=!1,c.volume=1);B&&(B.muted=!1,B.volume=0);let E=null,t=Math.max(0,Math.min(p,Number(h.get("t")||0))),A=!1,u=0,f=0;d.earthStudioUrl&&(s("#earthMedia").innerHTML=`<video src="${d.earthStudioUrl}" muted playsinline preload="auto"></video>`,E=document.querySelector("#earthMedia video"),s("#earthMissing").remove());function S(e,a=!1){const i=Math.floor(e),r=Math.floor(i/60),n=i%60;return a?`${String(r).padStart(2,"0")}:${String(n).padStart(2,"0")}:${String(Math.floor(e%1*24)).padStart(2,"0")}`:`${String(r).padStart(2,"0")}:${String(n).padStart(2,"0")}`}function M(e,a){return`${e.toFixed(3)}—${a.toFixed(3)}`}function C(e){var a;for(let i=0;i<l.length;i++){const r=((a=l[i+1])==null?void 0:a.start)??p;if(e<r||i===l.length-1)return{scene:l[i],index:i}}return{scene:l[0],index:0}}function L(e){const i={S06:["VISIBLE / RGB","MULTISPECTRAL","RADAR","POSITION","ELEVATION","TIME"],S07:["SATELLITE IMAGE","PIXEL GRID","AI SCAN","ROAD","BUILDING","WATER","VEGETATION"]}[e.id];if(!i)return e.titleEn;const r=Math.max(0,Math.min(.999,(t-e.start)/(e.end-e.start)));return i[Math.floor(r*i.length)]}function U(e){const i={S06:6,S07:7}[e.id]??1,r=Math.max(0,Math.min(.999,(t-e.start)/(e.end-e.start)));return Math.floor(r*i)}function V(){if(!B)return;const e=Math.min(1,Math.max(0,t/1.2)),a=Math.min(1,Math.max(0,(p-t)/2));B.volume=.14*e*a;Number.isFinite(B.duration)&&B.duration>0&&Math.abs(B.currentTime-Math.min(t,B.duration-.05))>.3&&(B.currentTime=Math.min(t,B.duration-.05));A?B.paused&&B.play().catch(()=>{}):B.pause()}function I(){const{scene:e,index:a}=C(t);v.className=`stage mode-${e.mode} scene-${e.id.toLowerCase()} ${t<=40.934?"earth-footage-active":"earth-footage-ended"}`,v.dataset.phase=String(U(e)),s("#sceneId").textContent=e.id,s("#kicker").textContent=e.kicker,s("#title").textContent=e.title,s("#titleEn").textContent=L(e),s("#dataLabel").textContent=L(e),s("#caption").textContent=e.caption,s("#timecode").textContent=S(t,!0),s("#progress").style.width=`${t/p*100}%`,m.value=String(t),s("#clock").textContent=`${S(t)} / ${S(p)}`,document.querySelectorAll("[data-scene]").forEach((i,r)=>i.classList.toggle("active",r===a)),v.style.setProperty("--scene-progress",String(Math.max(0,Math.min(1,(t-e.start)/(e.end-e.start))))),E&&(()=>{const q=Math.min(t,40.934);Math.abs(E.currentTime-q)>.25&&(E.currentTime=q);t>40.934||!A?E.pause():E.play().catch(()=>{})})(),V()}function g(e){A&&(u||(u=e),t=c&&Number.isFinite(c.currentTime)?c.currentTime:t+(e-u)/1e3,u=e,t>=p&&(t=p-.001,b(!1)),I(),A&&(f=requestAnimationFrame(g)))}function b(e=!A){A=e,O.textContent=e?"Ⅱ":"▶",u=0,c&&(c.currentTime=t,e?c.play().catch(()=>{}):c.pause()),B&&(B.currentTime=t,B.volume=.14*Math.min(1,Math.max(0,t/1.2))*Math.min(1,Math.max(0,(p-t)/2)),e?B.play().catch(()=>{}):B.pause()),cancelAnimationFrame(f),e&&(f=requestAnimationFrame(g))}O.addEventListener("click",()=>b());v.addEventListener("click",()=>{A||b(!0)});m.addEventListener("input",()=>{t=Number(m.value),c&&(c.currentTime=t),B&&(B.currentTime=t),I()});document.querySelec
