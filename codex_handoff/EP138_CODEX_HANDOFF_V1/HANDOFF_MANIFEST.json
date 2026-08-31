@@ -1,0 +1,47 @@
+[
+  {
+    "file": "ASSET_MANIFEST.md",
+    "bytes": 729,
+    "sha256": "86a3acb4c14589fd9b427da3dbdbb703e385fdf2c4519f9b99ef0cd605420418"
+  },
+  {
+    "file": "EP128_SUBTITLE_REFERENCE.css",
+    "bytes": 1025,
+    "sha256": "b23e4faf3c33850bb21111fa1fec1bcebe11b656dd90f4f41c7e9ccce59f90ec"
+  },
+  {
+    "file": "EP138_CURRENT_STATE.md",
+    "bytes": 863,
+    "sha256": "d1a62ce4aa499e9b60fb85848052cdffe982b091c4c713247e1c1d19c22c7f52"
+  },
+  {
+    "file": "EP138_SOURCE.part01.txt",
+    "bytes": 15881,
+    "sha256": "8c6e575f7b5f958481be74546243d8d418dc1712086789d5b1bdf4fa70e6a8ad"
+  },
+  {
+    "file": "EP138_SOURCE.part02.txt",
+    "bytes": 15001,
+    "sha256": "c14bccf8927f9eaf5b8cbc3335e18533822ddf2f960b9efcdb583fa13bdc71f4"
+  },
+  {
+    "file": "EP138_SOURCE.part03.txt",
+    "bytes": 12449,
+    "sha256": "95d31315d7d0849a40a14370320d8609650fe9098382536a9adddb680583570f"
+  },
+  {
+    "file": "EP138_V1_2_3_TASK.md",
+    "bytes": 1664,
+    "sha256": "57888f4f57ef63a9a95e0224d21872b47381e8a2b809e7bfc701840843954706"
+  },
+  {
+    "file": "README_CODEX_HANDOFF.md",
+    "bytes": 992,
+    "sha256": "d9313f22ceacd685ed1fa5a558eff95b161f878006cca5b8c1ee9e7c5ec4a13c"
+  },
+  {
+    "file": "assemble_sources.py",
+    "bytes": 309,
+    "sha256": "534a23510d595e762d3abb6d2e42cfecfdc111f71fddf34a68944bfa68e92dcf"
+  }
+]
