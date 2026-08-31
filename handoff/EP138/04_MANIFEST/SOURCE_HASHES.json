@@ -1,0 +1,27 @@
+{
+  "ep138": {
+    "source_filename": "EP138_H5_V1_2_2_BGM_FIX.html",
+    "source_size_bytes": 44845206,
+    "source_sha256": "99b8ad84d5967339b0f9bf524520f5326ae2611b0c35f86a101416b11177cef6",
+    "source_only_size_bytes": 43689,
+    "embedded_data_uris_omitted": {
+      "video/mp4": 1,
+      "audio/wav": 1,
+      "audio/mpeg": 1,
+      "image/jpeg": 1,
+      "image/png": 5
+    },
+    "source_snapshot_dir": "handoff/EP138/01_CURRENT_MASTER/parts"
+  },
+  "ep128": {
+    "source_filename": "EP128_H5_V1_2_UI_MOTION_SYSTEM_REBUILD.html",
+    "source_size_bytes": 9737561,
+    "source_sha256": "2114d3597f411279a53eaa8061d9bde78071681e60afb6cd2e030b2244b0da00",
+    "source_only_size_bytes": 36793,
+    "embedded_data_uris_omitted": {
+      "audio/mpeg": 2,
+      "image/webp": 19
+    },
+    "source_snapshot_dir": "handoff/EP138/02_REFERENCE/parts"
+  }
+}
