@@ -10,26 +10,36 @@ The next development task is limited to subtitle readability and voice-driven te
 
 ## Development baseline
 
-Use only the EP138 source snapshot under:
+Start with:
 
-`handoff/EP138/01_CURRENT_MASTER/parts/`
+`handoff/EP138/01_CURRENT_MASTER/EP138_CRITICAL_CODE_EXTRACT.md`
 
-Reconstruct with the parts in lexical order if a single inspection file is needed.
+This file records the accepted V1.2.2 scene data, subtitle/title DOM, current CSS, formal-voice master-clock logic, play/seek/scene-jump synchronization, and compatibility notes.
 
 The original standalone master is:
 
 `EP138_H5_V1_2_2_BGM_FIX.html`
 
-The GitHub source snapshot preserves the DOM/CSS/JS structure but replaces large embedded Base64 media payloads with explicit placeholder tokens so Codex can inspect and patch the program safely in GitHub.
-Do not treat those placeholder tokens as missing design decisions and do not redesign media sections because of them.
+Large embedded Base64 media payloads are intentionally not duplicated into GitHub. Do not interpret this as permission to redesign or replace media.
 
-## Reference
+A partial source snapshot also exists under `handoff/EP138/01_CURRENT_MASTER/parts/` for additional context, but the critical-code extract is the authoritative handoff reference for this V1.2.3 task.
 
-Use the EP128 reference snapshot under:
+## EP128 reference
 
-`handoff/EP138/02_REFERENCE/parts/`
+Use:
 
-EP128 is only a reference for subtitle visual scale, subtitle container capacity, and emphasis intensity. Do not copy its scene layout into EP138.
+`handoff/EP138/02_REFERENCE/EP128_SUBTITLE_STYLE_REFERENCE.md`
+
+It contains the exact EP128 subtitle-deck, subtitle, title and keyword-style values needed for comparison.
+
+EP128 is only a reference for subtitle visual scale, subtitle container capacity and emphasis intensity. Do not copy its scene layout into EP138.
+
+## Specs
+
+Read both before editing:
+
+- `handoff/EP138/03_SPEC/EP138_CURRENT_STATE.md`
+- `handoff/EP138/03_SPEC/EP138_V1_2_3_TASK.md`
 
 ## Frozen items
 
@@ -51,8 +61,6 @@ Do not modify:
 Create only after analysis is approved:
 
 `EP138_H5_V1_2_3_SUBTITLE_EMPHASIS_FIX.html`
-
-Read `handoff/EP138/03_SPEC/EP138_V1_2_3_TASK.md` before editing.
 
 ## First Codex action
 
