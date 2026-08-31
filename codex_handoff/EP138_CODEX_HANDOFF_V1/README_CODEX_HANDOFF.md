@@ -5,18 +5,18 @@ Branch: `ep138-codex-handoff-v1`
 
 ## Current baseline
 
-The only current EP138 development baseline is:
+The only current EP138 development baseline is the reconstructed source from:
 
-`EP138_H5_V1_2_2_BGM_FIX_CODEX_SOURCE.html`
+`EP138_SOURCE.part01.txt` ... `EP138_SOURCE.partNN.txt`
 
-This is a code-equivalent, GitHub-friendly source copy of the accepted standalone H5. Large embedded base64 media payloads were replaced by readable asset paths only so Codex can inspect and modify the program efficiently. Do not redesign or rebuild the accepted visual system.
+Run `python3 assemble_sources.py` to rebuild `EP138_H5_V1_2_2_BGM_FIX_CODEX_SOURCE.html`. The source is code-equivalent to the accepted standalone H5, with large embedded base64 media payloads replaced by semantic asset paths. Do not redesign or rebuild the accepted visual system.
 
-## Reference
+## EP128 typography reference
 
-`EP128_H5_V1_2_UI_MOTION_SYSTEM_REBUILD_CODEX_REFERENCE.html` is included only as the subtitle/mobile typography reference.
+Use `EP128_SUBTITLE_REFERENCE.css` only for subtitle/mobile typography sizing and hierarchy.
 
 ## Next task
 
-Read `EP138_V1_2_3_TASK.md` and `EP138_CURRENT_STATE.md` before editing.
+Read `EP138_V1_2_3_TASK.md`, `EP138_CURRENT_STATE.md`, and `ASSET_MANIFEST.md` before editing.
 
 First action in Codex: inspect and report current subtitle CSS, title CSS, caption rendering, timeline/scene driver, and proposed emphasis layer. Do not edit until that inspection is complete.
