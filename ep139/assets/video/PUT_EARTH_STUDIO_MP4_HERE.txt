@@ -1,0 +1,14 @@
+Place the four Earth Studio videos in this folder with EXACT filenames:
+
+ES01.mp4
+ES02.mp4
+ES03.mp4
+ES04.mp4
+
+Expected format:
+- 720x1280
+- 24 fps
+- H.264 / yuv420p
+- no audio required
+
+Do not rename after Codex begins development.
