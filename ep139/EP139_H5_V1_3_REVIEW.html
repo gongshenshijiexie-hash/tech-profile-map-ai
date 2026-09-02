@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+  <title>EP139 H5 V1.3｜SEMANTIC–VISUAL ALIGNMENT</title>
+  <link rel="stylesheet" href="styles-v1-3.css">
+</head>
+<body>
+  <main id="stage" aria-label="EP139 H5 V1.3 REVIEW">
+    <div id="media-stack">
+      <video id="es01" class="earth" src="assets/video/ES01.mp4" muted playsinline preload="auto"></video>
+      <video id="es02" class="earth" src="assets/video/ES02.mp4" muted playsinline preload="auto"></video>
+      <video id="es03" class="earth" src="assets/video/ES03.mp4" muted playsinline preload="auto"></video>
+      <video id="es04" class="earth" src="assets/video/ES04.mp4" muted playsinline preload="auto"></video>
+      <div class="grade"></div><div class="vignette"></div>
+    </div>
+    <section id="ai-layer" aria-hidden="true">
+      <header><span>AI VISION / SEMANTIC ALIGNMENT</span><span id="clock">00:00:00</span></header>
+      <div id="scene"><small id="scene-number"></small><strong id="scene-title"></strong></div>
+      <div id="water-note">WATER SHOT MISSING · MECHANISM DISABLED</div>
+      <div id="roi-a" class="roi"><b></b></div><div id="roi-b" class="roi"><b></b></div>
+      <svg id="mechanism" viewBox="0 0 720 1280" preserveAspectRatio="none"></svg>
+      <div id="mechanism-label"></div>
+      <div id="confidence"><span>CONFIDENCE</span><i><em></em></i><b>24%</b></div>
+      <div id="locator"><i></i><b>POSITION NOT LOCKED</b></div>
+      <div id="next-hook"><small>NEXT / EP140</small><strong>它此刻，到底在哪里？</strong></div>
+    </section>
+    <section id="subtitle-wrap"><div id="subtitle"></div></section>
+    <button id="start-overlay"><i></i><b>EP139 H5 V1.3 REVIEW</b><span>轻触画面开始审片</span><small>正式 WAV 是唯一主时钟</small></button>
+    <audio id="voice" src="assets/audio/EP139_VOICE_MASTER.wav" preload="auto"></audio>
+  </main>
+  <script src="app-v1-3.js"></script>
+</body>
+</html>
