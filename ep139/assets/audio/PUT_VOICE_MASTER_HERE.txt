@@ -1,0 +1,6 @@
+Place the formal voice master here with this exact filename:
+
+EP139_VOICE_MASTER.wav
+
+This WAV is the ONLY master clock for EP139.
+Do not alter duration or subtitle timing.
