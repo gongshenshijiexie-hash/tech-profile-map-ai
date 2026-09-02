@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>EP139 H5 Starter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="stage" aria-label="EP139 preview stage">
+    <div id="media-stack">
+      <video id="es01" class="earth" src="assets/video/ES01.mp4" muted playsinline preload="auto"></video>
+      <video id="es02" class="earth" src="assets/video/ES02.mp4" muted playsinline preload="auto"></video>
+      <video id="es03" class="earth" src="assets/video/ES03.mp4" muted playsinline preload="auto"></video>
+      <video id="es04" class="earth" src="assets/video/ES04.mp4" muted playsinline preload="auto"></video>
+      <div class="shade"></div>
+    </div>
+
+    <section id="ai-layer" aria-hidden="true">
+      <div id="scan-line"></div>
+      <div id="focus-road" class="focus-box"><span>ROAD ?</span></div>
+      <div id="focus-building" class="focus-box"><span>BUILDING ?</span></div>
+      <div id="evidence" class="evidence-panel"></div>
+      <svg id="relation-svg" viewBox="0 0 720 1280" preserveAspectRatio="none"></svg>
+      <div id="scene-kicker"></div>
+    </section>
+
+    <section id="subtitle-wrap">
+      <div id="subtitle"></div>
+    </section>
+
+    <div id="start-overlay">
+      <div class="start-copy">点击开始预览</div>
+    </div>
+
+    <audio id="voice" src="assets/audio/EP139_VOICE_MASTER.wav" preload="auto"></audio>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
